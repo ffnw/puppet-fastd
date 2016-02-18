@@ -27,7 +27,7 @@ fastd::instance { 'ol-nord': }
 ```puppet
 fastd::instance { 'ol-nord':
   port             => 10000,
-  peer_limit       => 150,
+  peer_limit       => 100,
   batman_interface => 'bat0',
 }
 ```
