@@ -35,7 +35,7 @@ fastd::instance { 'ol-nord':
 ## Reference
 
 * define fastd::instance
-  * $interface (optional, default fastd-_title_)
+  * $interface (optional, default 'fastd-_title_')
   * $port (optional, default 10000)
   * $peer\_limit (optional, default 150)
   * $batman\_interface (optional, default 'bat0')
