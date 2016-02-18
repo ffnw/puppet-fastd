@@ -1,0 +1,30 @@
+# DO NOT EDIT!
+# This file is puppet generated.
+
+interface "<%= $interface %>";
+bind any <%= $port %>;
+mtu 1312;
+peer limit <%= $peer_limit %>;
+
+method "salsa2012+umac";
+method "null+salsa2012+umac";
+
+on up "up.sh";
+on down "down.sh";
+on verify "
+	/etc/fastd/blacklist.sh $PEER_KEY
+";
+
+include peers from "static/";
+status socket "/var/run/<%= $interface %>.socket";
+
+include "secret.conf";
+
+# Log warnings and errors to stderr
+log level info;
+
+# Log everything to a log file
+#log to "/var/log/<%= $interface %>.log" level debug;
+
+log to syslog level debug;
+

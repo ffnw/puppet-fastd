@@ -1,0 +1,11 @@
+{
+  "_comment": "DO NOT EDIT! This file is puppet generated.",
+  "peers": 
+  [
+    {
+      "pubkey": "eebd5c0680f025e74a79fe6b1fbd7b8f747850e55b2b364679529a549ffcdbf2",
+      "comment": "foo example"
+    }
+  ]
+}
+

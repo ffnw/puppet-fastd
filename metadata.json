@@ -1,0 +1,17 @@
+{
+  "name": "ffnw-fastd",
+  "version": "0.1.0",
+  "author": "Simon Kurka",
+  "summary": "Installs and manages fastd tunnels for the Freifunk Nordwest network.",
+  "license": "GPLv2",
+  "source": "https://github.com/ffnw/puppet-fastd.git",
+  "project_page": "https://github.com/ffnw/puppet-fastd",
+  "issues_url": "https://github.com/ffnw/puppet-fastd/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"},
+    {"name":"puppetlabs-apt","version_requirement":">= 2.2.1"},
+    {"name":"ffnw-batman","version_requirement":">= 0.1.0"}
+  ],
+  "data_provider": null
+}
+
