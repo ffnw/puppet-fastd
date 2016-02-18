@@ -1,7 +1,7 @@
 define fastd::instance (
   String  $interface        = "fastd-${title}",
   Integer $port             = 10000,
-  Integer $peer_limit       = 150,
+  Integer $peer_limit       = 100,
   String  $batman_interface = 'bat0',
 ) {
 
