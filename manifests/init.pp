@@ -8,4 +8,6 @@ class fastd (
   class { 'fastd::install': } ->
   class { 'fastd::config': }
 
+  create_resources('fastd::instance', hiera('fastd::instance', {}))
+
 }
