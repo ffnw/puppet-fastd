@@ -5,8 +5,8 @@ define fastd::instance (
   String  $batman_interface = 'bat0',
 ) {
 
-  require fastd
-  require fastd::params
+  include fastd
+  include fastd::params
 
   file {
     default:
