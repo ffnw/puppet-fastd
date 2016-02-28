@@ -13,7 +13,7 @@ define fastd::instance (
       ensure => directory,
       owner  => 'root',
       group  => 'root',
-      mode   => '0755'
+      mode   => '0755';
     "/etc/fastd/${title}/":;
     "/etc/fastd/${title}/static/":;
   } ->
