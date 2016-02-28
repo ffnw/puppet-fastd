@@ -7,7 +7,7 @@ class fastd::install {
     release  => 'sid',
     repos    => 'main',
     key      => {
-      'id'     => '16EF3F64CB201D9C',
+      'id'     => '6664E7BDA6B669881EC52E7516EF3F64CB201D9C',
       'server' => 'pgpkeys.mit.edu',
     },
   }
