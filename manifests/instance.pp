@@ -18,7 +18,7 @@ define fastd::instance (
     "/etc/fastd/${title}/static/":;
   } ->
   exec { "fastd_generate-key_${title}":
-    command => "printf 'secret \"%s\";\\n' \$(/usr/bin/fastd --generate-key --machine-readable) > /etc/fastd/${title}/secret.conf",
+    command => "/usr/bin/printf 'secret \"%s\";\\n' \$(/usr/bin/fastd --generate-key --machine-readable) > /etc/fastd/${title}/secret.conf",
     unless  => "/usr/bin/test -e /etc/fastd/${title}/secret.conf",
   } ->
   file {
