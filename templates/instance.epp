@@ -13,8 +13,8 @@ peer limit <%= $peer_limit %>;
 method "salsa2012+umac";
 method "null+salsa2012+umac";
 
-on up "up.sh";
-on down "down.sh";
+on up "./up.sh";
+on down "./down.sh";
 on verify "
 	/etc/fastd/blacklist.sh $PEER_KEY
 ";
