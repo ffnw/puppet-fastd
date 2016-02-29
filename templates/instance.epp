@@ -6,7 +6,7 @@
 # This file is puppet generated.
 
 interface "<%= $interface %>";
-bind any <%= $port %>;
+bind any:<%= $port %>;
 mtu 1312;
 peer limit <%= $peer_limit %>;
 
