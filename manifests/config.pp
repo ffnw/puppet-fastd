@@ -12,10 +12,10 @@ class fastd::config inherits fastd {
       owner   => 'root',
       group   => 'root',
       mode    => '0644';
-    '/etc/fastd/up.sh':
+    '/etc/fastd/blacklist.sh':
       mode    => '0755',
       source => 'puppet:///modules/fastd/blacklist.sh';
-    "/etc/fastd/${title}/fastd.conf":
+    "/etc/fastd/blacklist.json":
       source => 'puppet:///modules/fastd/blacklist.json';
   }
 
