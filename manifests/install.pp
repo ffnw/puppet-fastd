@@ -6,7 +6,7 @@ class fastd::install {
     package { 'apt-transport-https':
       ensure => installed,
     }
-  )
+  }
   apt::source { 'universe-factory':
     location => 'http://repo.universe-factory.net/debian',
     release  => 'sid',
