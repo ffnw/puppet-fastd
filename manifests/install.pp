@@ -1,4 +1,4 @@
-class fastd::install {
+class fastd::install inherits fastd {
 
   include apt
 

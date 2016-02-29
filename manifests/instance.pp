@@ -46,8 +46,9 @@ define fastd::instance (
         port => $port,
         peer_limit => $peer_limit,
       });
-  } ->
+  } ~>
   service { "fastd@${instance}":
+    enable => true,
     ensure => running,
   }
 
