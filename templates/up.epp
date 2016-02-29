@@ -5,6 +5,7 @@
 # DO NOT EDIT!
 # This file is puppet generated.
 
-ip link set <%= $interface %> up
-batctl -m <%= $batman_interface %> if add <%= $interface %>
+/bin/ip link set <%= $interface %> up
+/usr/sbin/batctl -m <%= $batman_interface %> if add <%= $interface %>
+/bin/ip link set <%= $batman_interface %> up
 

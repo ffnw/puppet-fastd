@@ -5,6 +5,6 @@
 # DO NOT EDIT!
 # This file is puppet generated.
 
-batctl -m <%= $batman_interface %> if del <%= $interface %>
-ip link set <%= $interface %> down
+/usr/sbin/batctl -m <%= $batman_interface %> if del <%= $interface %>
+/bin/ip link set <%= $interface %> down
 
