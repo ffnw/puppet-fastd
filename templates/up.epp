@@ -1,3 +1,6 @@
+<%- | $interface,
+      $batman_interface,
+| -%>
 #!/bin/sh
 # DO NOT EDIT!
 # This file is puppet generated.

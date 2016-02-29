@@ -29,12 +29,12 @@ define fastd::instance (
       mode    => '0644';
     "/etc/fastd/${title}/up.sh":
       mode    => '0744',
-      content => epp('fastd/up.epp');
+      content => epp('fastd/up.epp', { interface => $interface, batman_interface => $batman_interface });
     "/etc/fastd/${title}/down.sh":
       mode    => '0744',
-      content => epp('fastd/down.epp');
+      content => epp('fastd/down.epp', { interface => $interface, batman_interface => $batman_interface });
     "/etc/fastd/${title}/fastd.conf":
-      content => epp('fastd/instance.epp');
+      content => epp('fastd/instance.epp', { interface => $interface, port => $port, peer_limit => $peer_limit });
   } ->
   service { "fastd@${title}":
     ensure => running,
