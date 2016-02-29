@@ -2,10 +2,11 @@ class fastd::install {
 
   include apt
 
-  package { 'apt-transport-https':
-    ensure => installed,
-  }
-
+  if(!defined(Package['apt-transport-https'])) {
+    package { 'apt-transport-https':
+      ensure => installed,
+    }
+  )
   apt::source { 'universe-factory':
     location => 'http://repo.universe-factory.net/debian',
     release  => 'sid',
