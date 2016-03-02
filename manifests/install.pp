@@ -21,4 +21,8 @@ class fastd::install inherits fastd {
     ensure => 'installed',
   }
 
+  package { 'haveged':
+    ensure => 'installed',
+  }
+
 }
