@@ -7,6 +7,7 @@ class fastd::install inherits fastd {
       ensure => installed,
     }
   }
+
   apt::source { 'universe-factory':
     location => 'http://repo.universe-factory.net/debian',
     release  => 'sid',
@@ -15,8 +16,7 @@ class fastd::install inherits fastd {
       'id'     => '6664E7BDA6B669881EC52E7516EF3F64CB201D9C',
       'server' => 'pgpkeys.mit.edu',
     },
-  }
-
+  } ->
   package { 'fastd':
     ensure => 'installed',
   }
