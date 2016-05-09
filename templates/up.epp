@@ -7,7 +7,7 @@
 
 /bin/ip link set <%= $interface %> up
 /usr/local/sbin/batctl -m <%= $batman_interface %> if add <%= $interface %>
-/sbin/ifup <%= $batman_interface %> up
+/sbin/ifup <%= $batman_interface %>
 /bin/ip link set <%= $batman_interface %> up
 exit 0
 
