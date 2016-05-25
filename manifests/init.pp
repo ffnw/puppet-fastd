@@ -2,6 +2,8 @@ class fastd (
   
 ) inherits fastd::params {
 
+  include batman
+
   class { 'fastd::install': } ->
   class { 'fastd::config': } ->
   class { 'fastd::service': }
