@@ -7,10 +7,9 @@ class fastd::install inherits fastd {
     label    => 'jessie-backports',
     priority => 500,
     packages => [ 'fastd' ]
-  }
-
+  } ->
   package { 'fastd':
-    ensure => 'installed',
+    ensure => latest,
   } ->
   file { '/lib/systemd/system/fastd@.service':
     ensure  => present,
