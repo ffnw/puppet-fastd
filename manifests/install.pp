@@ -3,8 +3,8 @@ class fastd::install inherits fastd {
   include apt
   include apt::backports
 
-  apt::pin { 'fastd jessie-backports':
-    label    => 'jessie-backports',
+  apt::pin { 'fastd from jessie-backports':
+    release  => 'jessie-backports',
     priority => 500,
     packages => [ 'fastd' ]
   } ->
