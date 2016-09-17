@@ -5,7 +5,7 @@ class fastd (
   include batman
 
   class { 'fastd::install': } ->
-  class { 'fastd::config': } ->
+  class { 'fastd::config': } ~>
   class { 'fastd::service': }
 
   contain fastd::install
