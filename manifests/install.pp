@@ -7,9 +7,8 @@ class fastd::install inherits fastd {
     ensure => 'installed',
   } ->
   file { '/lib/systemd/system/fastd@.service':
-    ensure  => link,
-    target  => '/lib/systemd/system/fastd.service',
-    replace => false
+    ensure  => present,
+    source  => '/lib/systemd/system/fastd.service'
   }
 
   package { 'haveged':
